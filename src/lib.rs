@@ -5,6 +5,8 @@ pub use error::Error;
 
 mod warc_reader;
 pub use warc_reader::WarcReader;
+pub use warc_reader::RawRecordIter;
+pub use warc_reader::RecordIter;
 mod warc_writer;
 pub use warc_writer::WarcWriter;
 
