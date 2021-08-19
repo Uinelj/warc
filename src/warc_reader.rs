@@ -26,7 +26,7 @@ impl<R: BufRead> WarcReader<R> {
 
     /// Create an iterator over all of the raw records read.
     ///
-    /// This only does well-formedness checks on the headers. See `RawRecordHeader` for more
+    /// This only does well-formedness checks on the headers. See [RawRecordHeader] for more
     /// information.
     pub fn iter_raw_records(self) -> RawRecordIter<R> {
         RawRecordIter::new(self.reader)
@@ -34,7 +34,7 @@ impl<R: BufRead> WarcReader<R> {
 
     /// Create an iterator over all of the records read.
     ///
-    /// This will fully build each record and check it for semantic correctness. See the `Record`
+    /// This will fully build each record and check it for semantic correctness. See the [Record]
     /// type for more information.
     pub fn iter_records(self) -> RecordIter<R> {
         RecordIter::new(self.reader)
